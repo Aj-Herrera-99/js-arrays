@@ -21,7 +21,7 @@ for (let i = teachers.length - 1; i >= 0; i--) {
 console.log("without toReversed():\n" + reversedCustom);
 
 const reversedCustom2 = [];
-for (let i = teachers.length - 1, j=0; i >= 0; i--, j++) {
+for (let i = teachers.length - 1, j = 0; i >= 0; i--, j++) {
   reversedCustom2[j] = teachers[i];
 }
 console.log("NO array methods:\n" + reversedCustom2);
@@ -40,12 +40,12 @@ for (let i = 0; i < teachers.length; i++) {
     longCustom.push(teachers[i]);
   }
 }
-console.log("without filter():\n" + longNames);
+console.log("without filter():\n" + longCustom);
 
 
 // 3. Rimuovi 'Ed' dall'array teachers
 console.log("\nes3");
-const teachersCopy = teachers.slice();
+const teachersCopy = teachers.slice();      //uso personale
 const indexEd = teachers.indexOf("Ed");
 // assumendo che Ed sia elemento di teachers => index !== -1
 teachers.splice(indexEd, 1);
