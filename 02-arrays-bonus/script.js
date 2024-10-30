@@ -20,6 +20,12 @@ for (let i = teachers.length - 1; i >= 0; i--) {
 }
 console.log("without toReversed():\n" + reversedCustom);
 
+const reversedCustom2 = [];
+for (let i = teachers.length - 1, j=0; i >= 0; i--, j++) {
+  reversedCustom2[j] = teachers[i];
+}
+console.log("NO array methods:\n" + reversedCustom2);
+
 
 
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
