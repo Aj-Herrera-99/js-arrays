@@ -15,7 +15,7 @@ const reversedTeachers = teachers.toReversed();
 console.log("toReversed() method:\n" + reversedTeachers);
 
 const reversedCustom = [];
-for(let i=teachers.length-1; i>=0; i--){
+for (let i = teachers.length - 1; i >= 0; i--) {
   reversedCustom.push(teachers[i]);
 }
 console.log("Without toReversed():\n" + reversedCustom);
@@ -28,8 +28,8 @@ const longNames = teachers.filter(longname => longname.length >= 5);
 console.log("filter() method:\n" + longNames);
 
 const longCustom = [];
-for(let i=0; i<teachers.length; i++){
-  if(teachers[i].length >= 5){
+for (let i = 0; i < teachers.length; i++) {
+  if (teachers[i].length >= 5) {
     longCustom.push(teachers[i]);
   }
 }
@@ -37,3 +37,17 @@ console.log("Without filter():\n" + longNames);
 
 
 // 3. Rimuovi 'Ed' dall'array teachers
+const teachersCopy = teachers.slice();
+console.dir(teachersCopy);
+
+const indexEd = teachers.indexOf("Ed");
+if (indexEd !== -1) {
+  teachers.splice(indexEd, 1);
+}
+console.log("splice() method teachers:\n" + teachers);
+
+for(let i=indexEd; i<teachersCopy.length - 1; i++){
+  teachersCopy[i] = teachersCopy[i+1];
+}
+teachersCopy.pop();
+console.dir("without splice() teachersCopy:\n" + teachersCopy);
